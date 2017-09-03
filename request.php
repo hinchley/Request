@@ -35,7 +35,7 @@ class Request {
    *
    * @var array
    */
-  protected static $input = array();
+  protected static $input;
 
   /**
    * An array of media type formats.
