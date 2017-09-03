@@ -76,7 +76,7 @@ class Request {
    * @return array
    */
   protected static function submitted() {
-    if (static::$input !== NULL) return static::$input;
+    if (! empty(static::$input)) return static::$input;
 
     parse_str(static::body(), $input);
     return static::$input = (array) $_GET + (array) $_POST + $input;
